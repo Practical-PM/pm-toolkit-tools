@@ -1,0 +1,38 @@
+{
+  "name": "tools-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "d3": "^7.9.0",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^6.28.0",
+    "shepherd.js": "^14.5.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@toolkit-pm/design-system": "file:../packages/toolkit-pm-design-system",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.4",
+    "eslint": "^9.36.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.22",
+    "globals": "^16.4.0",
+    "vite": "^7.1.7"
+  },
+  "optionalDependencies": {
+    "@esbuild/linux-x64": "^0.27.3",
+    "@rollup/rollup-linux-x64-gnu": "^4.57.1"
+  }
+}

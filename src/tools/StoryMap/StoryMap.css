@@ -1,0 +1,47 @@
+/* Import design system */
+@import '@toolkit-pm/design-system';
+
+/* App-specific styles only */
+.story-map-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.story-map-header h2 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.header-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xs);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 140, 66, 0.06);
+  border: 1px solid rgba(255, 140, 66, 0.15);
+}
+
+.header-buttons .btn-add {
+  margin: 0;
+  min-width: 132px;
+}
+
+@media (max-width: 900px) {
+  .story-map-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .header-buttons {
+    justify-content: flex-start;
+  }
+
+  .header-buttons .btn-add {
+    min-width: 0;
+  }
+}

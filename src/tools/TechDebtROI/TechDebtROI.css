@@ -1,0 +1,167 @@
+/* Import design system */
+@import '@toolkit-pm/design-system';
+
+.tech-debt-roi-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 420px) 1fr;
+  gap: var(--spacing-md);
+}
+
+.model-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.model-inputs h3,
+.roi-panel h3,
+.risk-panel h3,
+.cfo-panel h3 {
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.slider-value {
+  color: var(--primary-orange);
+}
+
+.roi-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(160px, 1fr));
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+}
+
+.roi-card {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm);
+  background: var(--bg-elevated);
+}
+
+.roi-card-label {
+  margin: 0 0 6px 0;
+  color: var(--text-tertiary);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.roi-card-value {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.velocity-chart {
+  margin-top: var(--spacing-md);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm);
+  background: linear-gradient(180deg, rgba(255, 140, 66, 0.05), rgba(255, 140, 66, 0.01));
+}
+
+.velocity-bars {
+  display: flex;
+  justify-content: center;
+  gap: 42px;
+  align-items: flex-end;
+  min-height: 260px;
+}
+
+.velocity-bar-group {
+  text-align: center;
+}
+
+.velocity-bar-group p {
+  margin: 10px 0 0 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.velocity-bar {
+  width: 92px;
+  border-radius: 12px 12px 8px 8px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+.velocity-bar span {
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.velocity-bar-healthy {
+  background: linear-gradient(180deg, rgba(16, 185, 129, 0.9), rgba(5, 150, 105, 0.95));
+}
+
+.velocity-bar-drag {
+  background: linear-gradient(180deg, rgba(249, 115, 22, 0.9), rgba(234, 88, 12, 0.95));
+}
+
+.velocity-delta {
+  margin: 12px 0 0 0;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.features-counter {
+  margin-top: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  border-left: 4px solid var(--primary-orange);
+  background: rgba(255, 140, 66, 0.1);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.features-counter p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.features-counter strong {
+  color: var(--text-primary);
+}
+
+.risk-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: var(--spacing-sm);
+}
+
+.risk-score {
+  margin-top: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background: var(--bg-elevated);
+}
+
+.risk-score p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.cfo-panel p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.cfo-panel strong {
+  color: var(--text-primary);
+}
+
+@media (max-width: 1080px) {
+  .tech-debt-roi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .risk-grid {
+    grid-template-columns: 1fr;
+  }
+}

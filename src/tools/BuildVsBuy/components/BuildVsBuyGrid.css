@@ -1,0 +1,37 @@
+.build-vs-buy-grid {
+  /* Grid is now wrapped in grid-section in App.jsx */
+}
+
+/* Ensure SVG elements aren't affected by Shepherd.js styles */
+.build-vs-buy-grid svg,
+.build-vs-buy-grid svg * {
+  box-sizing: border-box;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+.grid-svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.domain-group {
+  transition: opacity var(--animation-fast);
+}
+
+.domain-group:hover {
+  opacity: 1;
+}
+
+.domain-group.dragging {
+  opacity: 0.7;
+}
+
+.domain-group circle {
+  transition: r var(--animation-fast);
+}
+
+.domain-group:hover circle {
+  r: 10;
+}
+

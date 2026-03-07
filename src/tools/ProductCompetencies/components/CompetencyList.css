@@ -1,0 +1,539 @@
+/* Card container styles provided by <Tile> */
+
+.competency-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.competency-list-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.add-competency-btn {
+  background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-dark) 100%);
+  color: var(--text-primary);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform var(--animation-fast), box-shadow var(--animation-fast);
+  font-size: 0.9rem;
+}
+
+.add-competency-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(255, 94, 58, 0.4);
+}
+
+.add-competency-form {
+  background: var(--bg-elevated);
+  border: 1px solid rgba(255, 140, 66, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.add-competency-form h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+/* Matrix Table Styles */
+.competency-matrix {
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.competency-matrix table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bg-elevated);
+}
+
+.competency-matrix thead {
+  background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-dark) 100%);
+  color: var(--text-primary);
+}
+
+.competency-matrix th {
+  padding: 1rem 0.75rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.competency-matrix th.competency-col {
+  text-align: left;
+  width: 35%;
+  padding-left: 1.5rem;
+}
+
+.competency-matrix th.score-col {
+  width: 10%;
+}
+
+.competency-matrix th.actions-col {
+  width: 10%;
+}
+
+.score-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.score-number {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.score-label {
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+
+.competency-matrix tbody tr {
+  transition: background-color var(--animation-fast);
+}
+
+.competency-matrix tbody tr:hover:not(.editing) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.competency-matrix tbody tr:not(:last-child) td {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.competency-cell {
+  padding: 1rem 1.5rem;
+  text-align: left;
+}
+
+.competency-name-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.expand-btn {
+  background: none;
+  border: none;
+  color: var(--primary-orange);
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0.25rem;
+  transition: transform var(--animation-fast);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.expand-btn:hover {
+  transform: scale(1.2);
+}
+
+.competency-name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.competency-description {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.score-cell {
+  padding: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--animation-fast);
+  position: relative;
+}
+
+.score-cell:hover {
+  background-color: rgba(255, 140, 66, 0.1);
+}
+
+.score-cell.selected {
+  background: rgba(255, 140, 66, 0.2);
+}
+
+.score-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  position: relative;
+}
+
+.score-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  margin: 0;
+}
+
+.checkmark {
+  font-size: 1.5rem;
+  color: var(--primary-orange);
+  opacity: 0;
+  transition: opacity var(--animation-fast);
+}
+
+.score-cell.selected .checkmark {
+  opacity: 1;
+}
+
+.actions-cell {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.actions-cell .btn-icon {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--animation-fast);
+  font-size: 0.9rem;
+  margin: 0 0.25rem;
+}
+
+.actions-cell .btn-icon:hover {
+  background: var(--bg-elevated);
+  border-color: var(--primary-orange);
+}
+
+.actions-cell .btn-icon.btn-delete:hover {
+  background: #fee;
+  border-color: var(--error);
+}
+
+/* Edit Mode */
+.edit-cell {
+  padding: 1.5rem;
+}
+
+.competency-edit-form {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group:last-of-type {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  transition: border-color var(--animation-fast), box-shadow var(--animation-fast);
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-orange);
+  box-shadow: 0 0 0 3px rgba(255, 140, 66, 0.15);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.matrix-legend {
+  padding: 1rem;
+  background: var(--bg-elevated);
+  border-radius: 12px;
+  margin-top: 1rem;
+  border: 1px solid var(--border-light);
+}
+
+.matrix-legend p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Expanded Row Styles */
+.expanded-row {
+  background: var(--bg-elevated);
+}
+
+.expanded-cell {
+  padding: 1.5rem !important;
+  border-top: 2px solid var(--primary-orange);
+}
+
+.level-details-container {
+  animation: slideDown var(--animation-normal) ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.level-details-container h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+/* Table Style for Level Details */
+.level-details-table {
+  overflow-x: auto;
+}
+
+.level-details-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-elevated);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.level-details-table thead th {
+  background: rgba(255, 140, 66, 0.15);
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 2px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.level-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.level-details-table .level-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: var(--bg-card);
+  color: var(--primary-orange);
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.85rem;
+  border: 1px solid rgba(255, 140, 66, 0.3);
+}
+
+.level-details-table .level-label {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.level-detail-cell {
+  padding: 1rem 0.75rem;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+  vertical-align: top;
+  border-right: 1px solid var(--border-light);
+}
+
+.level-detail-cell:last-child {
+  border-right: none;
+}
+
+/* Level Detail Content with Edit Button */
+.level-detail-content {
+  position: relative;
+}
+
+.level-detail-content p {
+  margin: 0;
+  padding-right: 2rem;
+}
+
+.edit-level-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  opacity: 0;
+  transition: all var(--animation-fast);
+  color: var(--text-secondary);
+}
+
+.level-detail-cell:hover .edit-level-btn {
+  opacity: 1;
+}
+
+.edit-level-btn:hover {
+  background: rgba(255, 140, 66, 0.1);
+  border-color: var(--primary-orange);
+  color: var(--primary-orange);
+}
+
+/* Level Edit Form */
+.level-edit-form {
+  width: 100%;
+}
+
+.level-edit-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--primary-orange);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-family: inherit;
+  line-height: 1.5;
+  resize: vertical;
+  margin-bottom: 0.5rem;
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+.level-edit-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-dark);
+  box-shadow: 0 0 0 3px rgba(255, 94, 58, 0.15);
+}
+
+.level-edit-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-small {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .competency-list {
+    padding: 1rem;
+  }
+
+  .competency-list-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .competency-matrix {
+    font-size: 0.85rem;
+  }
+
+  .competency-matrix th,
+  .competency-matrix td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .competency-matrix th.competency-col {
+    padding-left: 0.75rem;
+  }
+
+  .score-header {
+    gap: 0.1rem;
+  }
+
+  .score-number {
+    font-size: 1rem;
+  }
+
+  .score-label {
+    font-size: 0.65rem;
+  }
+
+  .competency-name {
+    font-size: 0.9rem;
+  }
+
+  .competency-description {
+    font-size: 0.75rem;
+  }
+
+  .level-details-table {
+    font-size: 0.8rem;
+  }
+
+  .level-detail-cell {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .expanded-cell {
+    padding: 1rem !important;
+  }
+
+  .edit-level-btn {
+    opacity: 1;
+    position: static;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+}

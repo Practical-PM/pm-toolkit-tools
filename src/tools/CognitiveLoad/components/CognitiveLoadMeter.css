@@ -1,0 +1,161 @@
+/* ============================================
+   COGNITIVE LOAD METER — Content-specific styles
+   Card container is provided by <Tile>.
+   ============================================ */
+
+.cognitive-load-meter h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-family: var(--font-body);
+}
+
+.meter-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.score-section {
+  flex: 0 0 auto;
+}
+
+.score-display-compact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.score-circle-compact {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 6px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-elevated);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.score-value-compact {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+}
+
+.score-label-compact {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  font-weight: 600;
+  font-family: var(--font-body);
+}
+
+.status-indicator-compact {
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-xl);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  font-family: var(--font-body);
+}
+
+.metrics-section {
+  flex: 1;
+}
+
+.load-breakdown-compact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.breakdown-item-compact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background: rgba(255, 140, 66, 0.1);
+  border-left: 3px solid #ff8c42;
+  border-radius: var(--radius-lg);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.breakdown-item-compact:hover {
+  background: rgba(255, 140, 66, 0.15);
+  border-left-color: #ff5e3a;
+}
+
+.breakdown-label-compact {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-family: var(--font-body);
+}
+
+.breakdown-value-compact {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ff8c42;
+  font-family: var(--font-body);
+}
+
+/* Compact Mode */
+.cognitive-load-meter-compact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.compact-score {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  justify-content: center;
+}
+
+.compact-value {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.compact-label {
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+  font-weight: 600;
+}
+
+.compact-status {
+  padding: 0.375rem 0.875rem;
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .meter-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .score-section {
+    width: 100%;
+  }
+
+  .score-display-compact {
+    width: 100%;
+  }
+}

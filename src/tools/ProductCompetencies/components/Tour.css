@@ -1,0 +1,9 @@
+@import '../../../styles/tour-theme.css';
+
+/* Ensure SVG elements aren't affected by Shepherd.js styles */
+.radar-chart-container svg,
+.radar-chart-container svg * {
+  box-sizing: border-box;
+  filter: none !important;
+  opacity: 1 !important;
+}

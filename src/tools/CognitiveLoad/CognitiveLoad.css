@@ -1,0 +1,28 @@
+/* ============================================
+   COGNITIVE LOAD — Tool-specific overrides
+   Layout primitives, tiles, buttons, modals,
+   and form groups are provided by the design system.
+   ============================================ */
+
+/* Import design system */
+@import '@toolkit-pm/design-system';
+
+/* Welcome banner text centering */
+.welcome-banner {
+  text-align: center;
+}
+
+.welcome-banner h2 {
+  font-size: var(--h2-size, 1.8rem);
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+}
+
+.welcome-banner p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-lg);
+  font-family: var(--font-body);
+  line-height: var(--body-line-height);
+}

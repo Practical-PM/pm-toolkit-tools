@@ -1,0 +1,498 @@
+/* ============================================
+   KANO MODEL — Tool-specific overrides
+   Layout primitives, tiles, and buttons
+   are provided by the design system.
+   ============================================ */
+
+/* Import design system */
+@import '@toolkit-pm/design-system';
+
+/* ── Overview Section ── */
+.kano-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+/* Card-specific overrides (container provided by Tile) */
+.overview-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.overview-card h2 {
+  margin: 0;
+}
+
+.overview-text {
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0;
+}
+
+.overview-stats {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.stat-chip {
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.stat-chip.must {
+  background: rgba(239, 68, 68, 0.18);
+  color: #ef4444;
+}
+
+.stat-chip.performance {
+  background: rgba(59, 130, 246, 0.18);
+  color: #3b82f6;
+}
+
+.stat-chip.attractive {
+  background: rgba(16, 185, 129, 0.18);
+  color: #10b981;
+}
+
+.stat-chip.indifferent {
+  background: rgba(107, 114, 128, 0.2);
+  color: #9ca3af;
+}
+
+.stat-chip.reverse {
+  background: rgba(245, 158, 11, 0.18);
+  color: #f59e0b;
+}
+
+.view-toggle {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+/* ── Form Fields ── */
+.feature-form {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.field input,
+.field select,
+.field textarea {
+  background: var(--border-light);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 10px;
+  padding: 0.6rem 0.75rem;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.field input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.kano-walkthrough-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.4rem;
+  color: var(--text-secondary);
+}
+
+.kano-chart-only-card {
+  min-height: 640px;
+}
+
+.feature-edit-remove {
+  margin-top: var(--spacing-md);
+}
+
+.kano-about {
+  margin-top: var(--spacing-lg);
+}
+
+.kano-about h3 {
+  margin: 0 0 var(--spacing-sm);
+}
+
+.kano-about p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ── Chart + List Grid ── */
+.kano-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2.3fr) minmax(280px, 1fr);
+  gap: var(--spacing-lg);
+  align-items: start;
+}
+
+/* Card-specific overrides (container provided by Tile) */
+.kano-list-card h3 {
+  margin-top: 0;
+}
+
+.list-hint {
+  margin-top: 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+/* ── Feature List ── */
+.feature-list {
+  display: grid;
+  gap: var(--spacing-sm);
+}
+
+.feature-row {
+  display: grid;
+  grid-template-columns: 1.2fr 0.7fr auto auto;
+  gap: var(--spacing-sm);
+  align-items: center;
+  padding: 0.6rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.feature-row input,
+.feature-row select {
+  background: var(--border-light);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.45rem 0.55rem;
+  color: var(--text-primary);
+}
+
+.feature-row.must {
+  border-left: 3px solid var(--chart-orange);
+}
+
+.feature-row.want {
+  border-left: 3px solid var(--chart-blue);
+}
+
+.feature-row.exciter {
+  border-left: 3px solid var(--chart-purple);
+}
+
+.feature-fulfillment {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ── Chart ── */
+.kano-chart {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.kano-chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.kano-chart-header h3 {
+  margin: 0;
+}
+
+.kano-legend {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.kano-legend-under {
+  justify-content: center;
+  padding: 0 var(--spacing-sm);
+}
+
+.curve-description {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.legend-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.kano-chart-svg {
+  width: 100%;
+  height: auto;
+}
+
+.chart-panel {
+  fill: rgba(255, 255, 255, 0.04);
+  stroke: var(--border-light);
+  stroke-width: 2;
+  rx: 18;
+}
+
+.grid-line {
+  stroke: var(--border-light);
+  stroke-width: 1;
+}
+
+.axis-label {
+  fill: var(--text-tertiary);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.axis-title {
+  fill: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.curve {
+  fill: none;
+  stroke-width: 3;
+  opacity: 0.7;
+}
+
+.curve.must {
+  stroke: #ef4444;
+}
+
+.curve.performance {
+  stroke: #3b82f6;
+}
+
+.curve.attractive {
+  stroke: #10b981;
+}
+
+.curve.indifferent {
+  stroke: #6b7280;
+}
+
+.curve.reverse {
+  stroke: #f59e0b;
+}
+
+.feature-point {
+  stroke: var(--bg-whiteboard);
+  stroke-width: 2;
+  cursor: grab;
+}
+
+.feature-point.must-be {
+  fill: #ef4444;
+}
+
+.feature-point.performance {
+  fill: #3b82f6;
+}
+
+.feature-point.attractive {
+  fill: #10b981;
+}
+
+.feature-point.indifferent {
+  fill: #6b7280;
+}
+
+.feature-point.reverse {
+  fill: #f59e0b;
+}
+
+.feature-point.selected {
+  stroke: #ffffff;
+  stroke-width: 3;
+}
+
+.feature-row.selected {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+.feature-point:active {
+  cursor: grabbing;
+}
+
+.point-label {
+  fill: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ghost-point {
+  fill: var(--border-color);
+  stroke: rgba(255, 255, 255, 0.2);
+  stroke-width: 2;
+}
+
+.ghost-line {
+  stroke: rgba(255, 255, 255, 0.15);
+  stroke-dasharray: 4 6;
+  stroke-width: 2;
+}
+
+.effort-dots {
+  display: inline-flex;
+  gap: 4px;
+  margin-left: 10px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.dot.filled {
+  background: var(--primary-orange);
+}
+
+.feature-notes {
+  grid-column: 1 / span 3;
+  background: var(--border-light);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.45rem 0.55rem;
+  color: var(--text-primary);
+  resize: vertical;
+}
+
+.kano-recommendations h3 {
+  margin-top: 0;
+}
+
+.recommendation-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.recommendation-group h4 {
+  margin-bottom: var(--spacing-xs);
+}
+
+.recommendation-group ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--text-secondary);
+}
+
+.kano-matrix .matrix-grid {
+  position: relative;
+  min-height: 380px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(
+    to right,
+    rgba(16, 185, 129, 0.04) 0%,
+    rgba(16, 185, 129, 0.04) 50%,
+    rgba(239, 68, 68, 0.04) 50%,
+    rgba(239, 68, 68, 0.04) 100%
+  );
+}
+
+.matrix-grid::before,
+.matrix-grid::after {
+  content: '';
+  position: absolute;
+  background: var(--border-color);
+  opacity: 0.5;
+}
+
+.matrix-grid::before {
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+}
+
+.matrix-grid::after {
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+}
+
+.matrix-quadrant {
+  position: absolute;
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  pointer-events: none;
+}
+
+.matrix-quadrant.top-left { top: 8px; left: 10px; }
+.matrix-quadrant.top-right { top: 8px; right: 10px; }
+.matrix-quadrant.bottom-left { bottom: 8px; left: 10px; }
+.matrix-quadrant.bottom-right { bottom: 8px; right: 10px; }
+
+.matrix-point {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  padding: 0.3rem 0.55rem;
+  font-size: 0.72rem;
+  max-width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.matrix-point.must-be { background: rgba(239, 68, 68, 0.2); color: #fecaca; }
+.matrix-point.performance { background: rgba(59, 130, 246, 0.2); color: #bfdbfe; }
+.matrix-point.attractive { background: rgba(16, 185, 129, 0.2); color: #bbf7d0; }
+.matrix-point.indifferent { background: rgba(107, 114, 128, 0.24); color: #e5e7eb; }
+.matrix-point.reverse { background: rgba(245, 158, 11, 0.2); color: #fef3c7; }
+.matrix-point.selected { box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.45); }
+
+@media (max-width: 980px) {
+  .kano-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .feature-fulfillment {
+    grid-column: span 2;
+  }
+
+  .feature-notes {
+    grid-column: span 2;
+  }
+
+  .feature-row button {
+    grid-column: span 2;
+  }
+}

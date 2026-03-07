@@ -1,0 +1,10 @@
+@import '../../../styles/tour-theme.css';
+
+/* Ensure SVG elements aren't affected by Shepherd.js styles */
+.force-graph-container svg,
+.force-graph-container svg * {
+  box-sizing: border-box;
+  filter: none !important;
+  opacity: 1 !important;
+}
+

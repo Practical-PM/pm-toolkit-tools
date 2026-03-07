@@ -1,0 +1,47 @@
+.waterfall-tabs {
+  margin-bottom: var(--spacing-md);
+}
+
+.waterfall-tabs-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.waterfall-tabbar {
+  flex: 1;
+  min-width: 0;
+  border-bottom: none;
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: 0.25rem;
+}
+
+.waterfall-tabbar .ds-tab-bar__tab {
+  border-bottom: none;
+  border-radius: var(--radius-md);
+}
+
+.waterfall-tabbar .ds-tab-bar__tab--active {
+  background: rgba(255, 140, 66, 0.14);
+  border: 1px solid rgba(255, 140, 66, 0.25);
+}
+
+.waterfall-tab-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+@media (max-width: 900px) {
+  .waterfall-tabs-layout {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .waterfall-tab-actions {
+    justify-content: flex-end;
+  }
+}

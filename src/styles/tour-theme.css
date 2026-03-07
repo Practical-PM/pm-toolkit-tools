@@ -1,0 +1,147 @@
+/* Shared Shepherd walkthrough theme for Toolkit.PM dark mode */
+
+.shepherd-theme-custom.shepherd-element {
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.45);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  max-width: 420px;
+}
+
+.shepherd-theme-custom .shepherd-content {
+  background: transparent;
+  color: inherit;
+}
+
+.shepherd-theme-custom .shepherd-arrow {
+  border: 0;
+}
+
+.shepherd-theme-custom.shepherd-element[data-popper-placement^='top'] {
+  margin-bottom: 10px;
+}
+
+.shepherd-theme-custom.shepherd-element[data-popper-placement^='bottom'] {
+  margin-top: 10px;
+}
+
+.shepherd-theme-custom.shepherd-element[data-popper-placement^='left'] {
+  margin-right: 10px;
+}
+
+.shepherd-theme-custom.shepherd-element[data-popper-placement^='right'] {
+  margin-left: 10px;
+}
+
+.shepherd-theme-custom.shepherd-element[data-popper-placement^='top'] .shepherd-arrow::before,
+.shepherd-theme-custom.shepherd-element[data-popper-placement^='bottom'] .shepherd-arrow::before,
+.shepherd-theme-custom.shepherd-element[data-popper-placement^='left'] .shepherd-arrow::before,
+.shepherd-theme-custom.shepherd-element[data-popper-placement^='right'] .shepherd-arrow::before {
+  background-color: var(--bg-card);
+}
+
+.shepherd-theme-custom .shepherd-header {
+  padding: 16px 20px 0;
+  background: transparent;
+  border-bottom: none;
+}
+
+.shepherd-theme-custom.shepherd-has-title .shepherd-content .shepherd-header {
+  background: transparent !important;
+}
+
+.shepherd-theme-custom .shepherd-header .shepherd-cancel-icon {
+  background: transparent;
+  color: var(--text-tertiary);
+  font-size: 18px;
+  font-weight: 700;
+  transition: color var(--animation-fast);
+}
+
+.shepherd-theme-custom .shepherd-header .shepherd-cancel-icon:hover {
+  color: var(--text-primary);
+}
+
+.shepherd-theme-custom .shepherd-header .shepherd-title {
+  color: var(--text-primary);
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.shepherd-theme-custom .shepherd-text {
+  padding: 16px 20px 20px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.shepherd-theme-custom .shepherd-footer {
+  position: relative;
+  padding: 0 20px 20px;
+  background: transparent;
+}
+
+.shepherd-theme-custom .shepherd-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.shepherd-theme-custom .shepherd-button-primary {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--primary-gradient);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all var(--animation-fast);
+  box-shadow: none;
+}
+
+.shepherd-theme-custom .shepherd-button-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(255, 140, 66, 0.28);
+}
+
+.shepherd-theme-custom .shepherd-button-primary:active {
+  transform: translateY(0);
+}
+
+.shepherd-theme-custom .shepherd-button-secondary {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  background: var(--bg-elevated);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--animation-fast);
+}
+
+.shepherd-theme-custom .shepherd-button-secondary:hover {
+  border-color: var(--primary-orange);
+  color: var(--primary-orange);
+}
+
+.shepherd-modal-overlay-container {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+.shepherd-theme-custom .shepherd-progress {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary-gradient);
+}

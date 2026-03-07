@@ -1,0 +1,71 @@
+/* ============================================
+   WATERFALL — Tool-specific overrides
+   Layout primitives, tiles, buttons, and modals
+   are provided by the design system.
+   ============================================ */
+@import '@toolkit-pm/design-system';
+
+.waterfall-loading-state {
+  padding: var(--spacing-xl);
+  text-align: center;
+}
+
+/* Workspace layout - compact overview above chart */
+.waterfall-workspace {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--spacing-md);
+  align-items: stretch;
+}
+
+.stats-strip .ds-stat {
+  background: rgba(255, 140, 66, 0.08);
+  border: 1px solid rgba(255, 140, 66, 0.18);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-sm) var(--spacing-md);
+  min-height: 88px;
+  justify-content: center;
+}
+
+.stats-strip .ds-stat__label {
+  font-size: 0.72rem;
+}
+
+.stats-strip .ds-stat__value {
+  font-size: 1.2rem;
+}
+
+.stats-strip .ds-stat__desc {
+  font-size: 0.72rem;
+}
+
+/* Chart panel content */
+.chart-panel {
+  min-width: 0;
+}
+
+.waterfall-walkthrough-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.4rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1024px) {
+  .stats-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-strip {
+    grid-template-columns: 1fr;
+  }
+}

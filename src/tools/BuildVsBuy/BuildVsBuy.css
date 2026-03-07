@@ -1,0 +1,83 @@
+/* Import design system */
+@import '@toolkit-pm/design-system';
+
+/* App-specific styles only */
+.build-vs-buy-seo-banner {
+  margin-bottom: var(--spacing-lg);
+  border: 1px solid color-mix(in srgb, var(--color-orange-primary) 35%, transparent);
+  background:
+    radial-gradient(120% 150% at 0% 0%, color-mix(in srgb, var(--color-orange-primary) 14%, transparent), transparent 65%),
+    var(--tile-bg, #111);
+}
+
+.build-vs-buy-seo-banner .seo-kicker {
+  margin: 0 0 0.35rem;
+  color: var(--color-orange-primary);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.build-vs-buy-seo-banner h1 {
+  margin: 0;
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  line-height: 1.2;
+}
+
+.build-vs-buy-seo-banner .seo-summary {
+  margin: 0.8rem 0 0;
+  max-width: 78ch;
+  color: var(--text-muted, #c8c8c8);
+  line-height: 1.55;
+}
+
+.build-vs-buy-seo-banner .seo-points {
+  margin: 0.9rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--text-primary, #efefef);
+  display: grid;
+  gap: 0.35rem;
+}
+
+.build-vs-buy-faq-section {
+  margin-top: var(--spacing-xl);
+}
+
+.build-vs-buy-faq-section h2 {
+  margin: 0 0 0.9rem;
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+}
+
+.faq-list {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.build-vs-buy-faq-item p {
+  margin: 0;
+  color: var(--text-muted, #c8c8c8);
+  line-height: 1.55;
+}
+
+.recommendations-section {
+  margin-top: var(--spacing-xl);
+}
+
+@media (max-width: 768px) {
+  .build-vs-buy-seo-banner {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .build-vs-buy-seo-banner .seo-summary {
+    font-size: 0.96rem;
+  }
+
+  .build-vs-buy-faq-item .ds-toggle-box__title {
+    font-size: 0.95rem;
+  }
+
+  .build-vs-buy-faq-item p {
+    font-size: 0.94rem;
+  }
+}

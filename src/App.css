@@ -1,0 +1,117 @@
+/* Import design system */
+@import '@toolkit-pm/design-system';
+
+/* App-specific styles only */
+
+/* ── Under Construction Banner ── */
+.construction-banner {
+  position: relative;
+  margin-bottom: var(--spacing-xl);
+  padding: 0;
+  overflow: hidden;
+  border: 1px dashed rgba(245, 158, 11, 0.4);
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    rgba(245, 158, 11, 0.06) 0%,
+    rgba(255, 140, 66, 0.03) 50%,
+    rgba(245, 158, 11, 0.06) 100%
+  );
+  transition: border-color 0.2s ease;
+}
+
+.construction-banner:hover {
+  border-color: rgba(245, 158, 11, 0.6);
+}
+
+/* Diagonal caution tape stripes */
+.construction-tape {
+  display: flex;
+  height: 6px;
+  overflow: hidden;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--warning) 0px,
+    var(--warning) 8px,
+    transparent 8px,
+    transparent 16px,
+    var(--primary-orange) 16px,
+    var(--primary-orange) 24px,
+    transparent 24px,
+    transparent 32px
+  );
+  opacity: 0.5;
+}
+
+.construction-tape-bottom {
+  transform: scaleX(-1);
+}
+
+.tape-stripe {
+  display: none; /* stripes handled by gradient */
+}
+
+.construction-content {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg) var(--spacing-xl);
+}
+
+.construction-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  color: var(--warning);
+  margin-top: 2px;
+}
+
+.construction-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.construction-text h3 {
+  font-size: 1.1rem;
+  color: var(--warning);
+  margin-bottom: var(--spacing-xs);
+  font-family: var(--font-heading);
+  letter-spacing: 0.5px;
+}
+
+.construction-text p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .construction-banner {
+    transform: rotate(0deg);
+  }
+
+  .construction-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+
+  .construction-text h3 {
+    font-size: 1rem;
+  }
+
+  .construction-text p {
+    font-size: 0.9rem;
+  }
+}

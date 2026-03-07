@@ -1,0 +1,88 @@
+.waterfall-chart {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-header {
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.chart-header-left {
+  flex: 1;
+}
+
+.chart-header h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-weight: 700;
+}
+
+.chart-subtitle {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+}
+
+.chart-config-button {
+  flex-shrink: 0;
+  min-width: 34px;
+  min-height: 34px;
+}
+
+.chart-config-button:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.chart-container {
+  flex: 1;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+}
+
+.chart-svg {
+  display: block;
+}
+
+.waterfall-bar {
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+}
+
+.waterfall-bar:hover {
+  opacity: 0.8;
+}
+
+.x-axis-label {
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@media (max-width: 768px) {
+  .waterfall-chart {
+    padding: 1rem;
+  }
+
+  .chart-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .chart-container {
+    min-height: 400px;
+  }
+}
+

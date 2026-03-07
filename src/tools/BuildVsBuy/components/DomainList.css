@@ -1,0 +1,106 @@
+/* Card container styles provided by <Tile> */
+
+.domain-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.domain-list-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-tertiary);
+  font-style: italic;
+}
+
+.domains-table {
+  overflow-x: auto;
+}
+
+.domains-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.domains-table th {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 2px solid var(--border-color);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  background: var(--bg-elevated);
+}
+
+.domains-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.domain-name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.domain-description {
+  color: var(--text-secondary);
+  max-width: 300px;
+}
+
+.domain-position {
+  font-family: 'Courier New', monospace;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.domain-quadrant {
+  text-align: center;
+}
+
+.quadrant-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 140, 66, 0.15);
+}
+
+.domain-actions {
+  text-align: center;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: transform var(--animation-fast);
+}
+
+.action-btn:hover {
+  transform: scale(1.2);
+}
+
+.edit-btn:hover {
+  filter: brightness(1.2);
+}
+
+.delete-btn:hover {
+  filter: hue-rotate(20deg);
+}
+

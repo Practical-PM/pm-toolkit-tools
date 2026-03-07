@@ -1,0 +1,245 @@
+.story-map-container {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+}
+
+.story-map-wrapper {
+  min-width: 100%;
+  overflow-x: auto;
+}
+
+.story-map-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.story-map-empty {
+  padding: 48px;
+  text-align: center;
+  color: var(--text-tertiary);
+  font-size: 16px;
+}
+
+/* Header Row */
+.iteration-header-cell {
+  width: 200px;
+  min-width: 200px;
+  padding: 16px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  vertical-align: top;
+}
+
+.activity-header-cell {
+  min-width: 250px;
+  padding: 16px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  vertical-align: top;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.activity-header-content {
+  height: 100%;
+}
+
+.activity-header-button {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity var(--animation-fast);
+}
+
+.activity-header-button:hover {
+  opacity: 0.7;
+}
+
+.activity-header-button h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 8px 0;
+}
+
+.activity-description {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Iteration Labels */
+.iteration-label-cell {
+  width: 200px;
+  min-width: 200px;
+  padding: 16px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  vertical-align: top;
+  position: sticky;
+  left: 0;
+  z-index: 5;
+}
+
+.iteration-label-button {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity var(--animation-fast);
+}
+
+.iteration-label-button:hover {
+  opacity: 0.7;
+}
+
+.iteration-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.iteration-date {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* Story Cells */
+.story-cell {
+  min-width: 250px;
+  min-height: 120px;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  vertical-align: top;
+  background: var(--bg-card);
+}
+
+.story-cell.empty {
+  background: var(--bg-light);
+}
+
+.empty-cell-hint {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+}
+
+.empty-cell-hint.clickable {
+  cursor: pointer;
+  transition: all var(--animation-fast);
+  border-radius: 8px;
+}
+
+.empty-cell-hint.clickable:hover {
+  background: rgba(255, 140, 66, 0.1);
+  color: var(--primary-orange);
+}
+
+.empty-message {
+  font-size: 14px;
+  color: var(--text-tertiary);
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+}
+
+/* Story Cards */
+.story-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  border-left: 3px solid;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all var(--animation-fast);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.story-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 140, 66, 0.3);
+}
+
+.story-card:last-child {
+  margin-bottom: 0;
+}
+
+.story-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.story-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  flex: 1;
+  line-height: 1.4;
+}
+
+.story-status-badge {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-primary);
+  padding: 4px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.story-description {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .iteration-header-cell,
+  .iteration-label-cell {
+    width: 150px;
+    min-width: 150px;
+  }
+
+  .activity-header-cell,
+  .story-cell {
+    min-width: 200px;
+  }
+
+  .story-card {
+    padding: 10px;
+  }
+
+  .story-title {
+    font-size: 13px;
+  }
+
+  .story-description {
+    font-size: 11px;
+  }
+}
+

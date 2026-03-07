@@ -1,0 +1,47 @@
+/* ============================================
+   RECOMMENDATIONS — Content-specific styles
+   Card container is provided by <Tile>.
+   ============================================ */
+
+.recommendations h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-family: var(--font-body);
+}
+
+.recommendations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.recommendation-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: rgba(255, 140, 66, 0.1);
+  border-left: 3px solid var(--primary-orange);
+  border-radius: var(--radius-lg);
+  transition: background var(--animation-fast), border-color var(--animation-fast);
+}
+
+.recommendation-item:hover {
+  background: rgba(255, 140, 66, 0.15);
+  border-left-color: var(--primary-dark);
+}
+
+.rec-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.rec-text {
+  flex: 1;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  font-family: var(--font-body);
+}

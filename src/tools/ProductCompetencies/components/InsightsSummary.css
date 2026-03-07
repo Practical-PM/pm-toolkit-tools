@@ -1,0 +1,178 @@
+/* Card container styles provided by <Tile> */
+
+.insights-summary h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.empty-insights {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-tertiary);
+}
+
+.overall-score {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background: rgba(255, 140, 66, 0.1);
+  border: 1px solid rgba(255, 140, 66, 0.2);
+  border-radius: 16px;
+  margin-bottom: 2rem;
+}
+
+.score-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border: 6px solid;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  flex-shrink: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.score-value {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.score-max {
+  font-size: 1.2rem;
+  color: var(--text-tertiary);
+}
+
+.score-info {
+  flex: 1;
+}
+
+.score-info h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.score-status {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.score-description {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Side-by-side columns for strengths and development areas */
+.insights-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.insights-section {
+  flex: 1;
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.strengths-title {
+  color: var(--success);
+}
+
+.development-title {
+  color: var(--warning);
+}
+
+.insights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.insight-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: background var(--animation-fast);
+}
+
+.strength-item {
+  background: rgba(16, 185, 129, 0.1);
+  border-left: 3px solid var(--success);
+}
+
+.strength-item:hover {
+  background: rgba(16, 185, 129, 0.15);
+}
+
+.development-item {
+  background: rgba(245, 158, 11, 0.1);
+  border-left: 3px solid var(--warning);
+}
+
+.development-item:hover {
+  background: rgba(245, 158, 11, 0.15);
+}
+
+.insight-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.insight-score {
+  font-size: 0.9rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .insights-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.unscored-notice {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: rgba(251, 191, 36, 0.15);
+  border-left: 3px solid var(--warning);
+  border-radius: 12px;
+}
+
+.unscored-notice p {
+  margin: 0;
+  color: var(--warning);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .overall-score {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .score-info {
+    width: 100%;
+  }
+}
+

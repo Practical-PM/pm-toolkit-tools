@@ -1,0 +1,122 @@
+/* Card container styles provided by <Tile> */
+
+.recommendations h3 {
+  margin: 0 0 24px 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.recommendation-card {
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-elevated);
+  transition: transform var(--animation-fast), box-shadow var(--animation-fast), border-color var(--animation-fast);
+}
+
+.recommendation-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 140, 66, 0.3);
+}
+
+.recommendation-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.recommendation-icon {
+  font-size: 28px;
+}
+
+.recommendation-header h4 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.recommendation-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 12px 0;
+  line-height: 1.5;
+}
+
+.domains-list {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 2px solid #e0e0e0;
+}
+
+.domains-count {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.domains-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.domains-list li {
+  padding: 6px 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.domains-list li:before {
+  content: '• ';
+  color: var(--primary-orange);
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.no-domains {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+  font-size: 13px;
+  color: var(--text-tertiary);
+  font-style: italic;
+}
+
+.buying-2026-section {
+  margin-top: 24px;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--primary-orange);
+  border-radius: 12px;
+  background: var(--bg-elevated);
+}
+
+.buying-2026-section h4 {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.buying-2026-section p {
+  margin: 0 0 10px 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.buying-2026-section p:last-child {
+  margin-bottom: 0;
+}
+

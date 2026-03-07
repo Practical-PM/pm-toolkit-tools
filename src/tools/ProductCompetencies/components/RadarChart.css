@@ -1,0 +1,59 @@
+/* Card container styles provided by <Tile> */
+
+.radar-chart-container h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.radar-chart {
+  display: block;
+  margin: 0 auto;
+}
+
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+}
+
+.empty-state p {
+  font-size: 1.1rem;
+  color: var(--text-tertiary);
+  max-width: 300px;
+}
+
+.radar-tooltip {
+  position: fixed;
+  padding: 0.75rem 1rem;
+  background: rgba(0, 0, 0, 0.85);
+  color: var(--text-primary);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--animation-fast);
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.radar-tooltip strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .radar-chart-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .radar-chart {
+    max-width: 100%;
+    height: auto;
+  }
+}
+

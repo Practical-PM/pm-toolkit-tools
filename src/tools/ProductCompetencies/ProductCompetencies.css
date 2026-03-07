@@ -1,0 +1,8 @@
+/* ============================================
+   PRODUCT COMPETENCIES — Tool-specific overrides
+   Layout primitives, tiles, buttons, and modals
+   are provided by the design system.
+   ============================================ */
+
+/* Import design system */
+@import '@toolkit-pm/design-system';

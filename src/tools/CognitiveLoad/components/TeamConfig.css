@@ -1,0 +1,49 @@
+/* ============================================
+   TEAM CONFIG — Content-specific styles
+   Card container is provided by <Tile>.
+   Form groups and inputs are provided by the design system.
+   ============================================ */
+
+.team-config h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-lg);
+  font-family: var(--font-body);
+}
+
+.value-display {
+  color: var(--primary-orange);
+  font-weight: 700;
+}
+
+.capacity-indicator {
+  margin-top: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: rgba(255, 140, 66, 0.1);
+  border-left: 3px solid var(--primary-orange);
+  border-radius: var(--radius-lg);
+  transition: background var(--animation-fast), border-color var(--animation-fast);
+}
+
+.capacity-indicator:hover {
+  background: rgba(255, 140, 66, 0.15);
+  border-left-color: var(--primary-dark);
+}
+
+.capacity-indicator small {
+  color: var(--primary-orange);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+}
+
+.efficiency-hint {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  font-family: var(--font-body);
+}

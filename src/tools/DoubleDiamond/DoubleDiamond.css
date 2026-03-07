@@ -1,0 +1,56 @@
+/* Import design system */
+@import '@toolkit-pm/design-system';
+
+.double-diamond-diagram-tile h2,
+.double-diamond-board-tile h2 {
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.diagram-description {
+  margin: 0 0 var(--spacing-md) 0;
+  color: var(--text-secondary);
+}
+
+.double-diamond-diagram {
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(255, 140, 66, 0.08), rgba(255, 140, 66, 0.02));
+  padding: var(--spacing-sm);
+}
+
+.double-diamond-diagram svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.double-diamond-diagram .diamond-shape {
+  fill: rgba(255, 140, 66, 0.12);
+  stroke: rgba(255, 140, 66, 0.9);
+  stroke-width: 2;
+}
+
+.double-diamond-diagram .flow-arrow,
+.double-diamond-diagram .feedback-arrow {
+  fill: none;
+  stroke: var(--text-secondary);
+  stroke-width: 2;
+  marker-end: url(#arrowhead);
+}
+
+.double-diamond-diagram marker polygon {
+  fill: var(--text-secondary);
+}
+
+.double-diamond-diagram .phase-label {
+  text-anchor: middle;
+  font-weight: 700;
+  font-size: 20px;
+  fill: var(--text-primary);
+}
+
+.double-diamond-diagram .feedback-label {
+  font-size: 14px;
+  fill: var(--text-secondary);
+}
