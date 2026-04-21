@@ -166,7 +166,7 @@
   align-items: center;
   padding: 0.6rem;
   background: rgba(255, 255, 255, 0.04);
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -304,7 +304,7 @@
 }
 
 .feature-point {
-  stroke: var(--bg-whiteboard);
+  stroke: var(--bg-canvas);
   stroke-width: 2;
   cursor: grab;
 }
@@ -409,7 +409,7 @@
   position: relative;
   min-height: 380px;
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   background: linear-gradient(
     to right,

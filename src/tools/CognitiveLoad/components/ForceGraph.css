@@ -1,8 +1,8 @@
 .force-graph-container {
-  background: #1c1c22;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 16px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-surface);
   overflow: hidden;
   flex: 1 1 auto;
   min-height: 600px;

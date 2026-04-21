@@ -1,0 +1,56 @@
+.cod-chart-wrap {
+  position: relative;
+}
+
+.cod-chart-svg {
+  width: 100%;
+  display: block;
+}
+
+.cod-axis text,
+.cod-axis path,
+.cod-axis line {
+  color: var(--text-secondary);
+  stroke: var(--border-medium);
+}
+
+.cod-axis-label {
+  fill: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.cod-chart-tooltip {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.55rem;
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+  transition: opacity var(--animation-fast) ease;
+  z-index: 5;
+}
+
+.cod-chart-legend {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 0.7rem 1.1rem;
+  flex-wrap: wrap;
+}
+
+.cod-chart-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.83rem;
+  color: var(--text-secondary);
+}
+
+.cod-chart-legend-dot {
+  width: 0.66rem;
+  height: 0.66rem;
+  border-radius: 999px;
+}

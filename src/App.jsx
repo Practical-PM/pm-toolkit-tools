@@ -7,6 +7,9 @@ import ProductCompetencies from './tools/ProductCompetencies/ProductCompetencies
 import StoryMap from './tools/StoryMap/StoryMap';
 import TechDebtROI from './tools/TechDebtROI/TechDebtROI';
 import Waterfall from './tools/Waterfall/Waterfall';
+import CostOfDelay from './tools/CostOfDelay/CostOfDelay';
+import UnitEconomics from './tools/UnitEconomics/UnitEconomics';
+import BreadthVsDepth from './tools/BreadthVsDepth/BreadthVsDepth';
 import './App.css';
 
 function App() {
@@ -31,17 +34,20 @@ function AppContent() {
           <Route path="/story-map" element={<StoryMap />} />
           <Route path="/tech-debt-roi" element={<TechDebtROI />} />
           <Route path="/waterfall" element={<Waterfall />} />
+          <Route path="/cost-of-delay" element={<CostOfDelay />} />
+          <Route path="/unit-economics" element={<UnitEconomics />} />
+          <Route path="/breadth-vs-depth" element={<BreadthVsDepth />} />
         </Routes>
       </main>
 
       <footer className="app-footer animate-slide-bottom stagger-4">
-        <p className="sketchy-text">
+        <p className="ds-type">
           Part of <strong>The PM Toolkit</strong> - A collection of practical product management tools
         </p>
-        <p className="footer-links sketchy-text">
-          <a href="https://practicalpm.tools/" className="sketchy-text">&larr; Back to Toolkit</a>
+        <p className="footer-links ds-type">
+          <a href="https://practicalpm.tools/" className="ds-type">&larr; Back to Toolkit</a>
           {" • "}
-          <a href="https://github.com/Practical-PM" target="_blank" rel="noopener noreferrer" className="sketchy-text">
+          <a href="https://github.com/Practical-PM" target="_blank" rel="noopener noreferrer" className="ds-type">
             Open Source on GitHub - Fork &amp; Download
           </a>
         </p>
@@ -64,6 +70,13 @@ function AppContent() {
 
 function ToolsLanding() {
   const tools = [
+    {
+      id: 'breadth-vs-depth',
+      title: 'Breadth vs Depth',
+      description: 'Score whether to broaden into new segments or double down deeply where you already have traction.',
+      icon: '🧭',
+      path: '/breadth-vs-depth'
+    },
     {
       id: 'build-vs-buy',
       title: 'Build vs Buy Decision Framework',
@@ -119,14 +132,28 @@ function ToolsLanding() {
       description: 'Build interactive waterfall charts for any metric — currency, percentage, or raw numbers.',
       icon: '📊',
       path: '/waterfall'
+    },
+    {
+      id: 'cost-of-delay',
+      title: 'Cost of Delay and WSJF Prioritization',
+      description: 'Quantify weekly delay cost, model scenarios, and rank opportunities using WSJF economics.',
+      icon: '💸',
+      path: '/cost-of-delay'
+    },
+    {
+      id: 'unit-economics',
+      title: 'Unit Economics',
+      description: 'Understand fixed costs, variable costs, and P&L through break-even, LTV:CAC, and margin visualisations.',
+      icon: '💰',
+      path: '/unit-economics'
     }
   ];
 
   return (
     <div className="landing-page animate-fade-in">
       <div className="landing-header animate-fade-in stagger-1">
-        <h1 className="sketchy-text">Tools</h1>
-        <p className="landing-description sketchy-text">
+        <h1 className="ds-type">Tools</h1>
+        <p className="landing-description ds-type">
           Interactive frameworks, canvases, and calculators to help you plan, prioritize, 
           and make better product decisions. Each tool includes explanations and hands-on components.
         </p>
@@ -134,11 +161,11 @@ function ToolsLanding() {
 
       <div className="tools-grid">
         {tools.map((tool, index) => (
-          <Link key={tool.id} to={tool.path} className="tool-card rough-card animate-fade-in" style={{ animationDelay: `${0.2 + index * 0.1}s` }}>
+          <Link key={tool.id} to={tool.path} className="tool-card ds-surface-card animate-fade-in" style={{ animationDelay: `${0.2 + index * 0.1}s` }}>
             <div className="tool-icon">{tool.icon}</div>
-            <h3 className="tool-title sketchy-text">{tool.title}</h3>
-            <p className="tool-description sketchy-text">{tool.description}</p>
-            <div className="tool-link sketchy-text">
+            <h3 className="tool-title ds-type">{tool.title}</h3>
+            <p className="tool-description ds-type">{tool.description}</p>
+            <div className="tool-link ds-type">
               Explore &rarr; 
             </div>
           </Link>

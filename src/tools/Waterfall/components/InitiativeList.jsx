@@ -92,7 +92,7 @@ export function InitiativeList({
             size="sm"
             onClick={() => setIsCollapsed(!isCollapsed)}
           />
-          <h2 className="sketchy-text">Initiatives</h2>
+          <h2 className="ds-type">Initiatives</h2>
         </div>
         <Button variant="add" onClick={handleAdd}>
           + Add Initiative

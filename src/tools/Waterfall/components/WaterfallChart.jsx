@@ -322,7 +322,7 @@ export function WaterfallChart({
     <div className="waterfall-chart">
       <div className="chart-header">
         <div className="chart-header-left">
-          <h2 className="sketchy-text">{waterfallName}</h2>
+          <h2 className="ds-type">{waterfallName}</h2>
         </div>
         {onConfigClick && (
           <IconButton

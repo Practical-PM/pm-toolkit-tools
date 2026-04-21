@@ -80,7 +80,7 @@
   padding: 1rem;
   background: var(--bg-elevated);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -138,7 +138,7 @@
   gap: 1rem;
   padding: 1.25rem;
   background: var(--bg-elevated);
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   border: 1px solid var(--border-light);
   transition: all var(--animation-fast) var(--ease-out-quad);
 }
@@ -336,7 +336,7 @@
   align-items: center;
   padding: 0.75rem 1rem;
   background: var(--bg-elevated);
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   border: 1px solid var(--border-light);
 }
 

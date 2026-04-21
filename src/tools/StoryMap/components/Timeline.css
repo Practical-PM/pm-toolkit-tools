@@ -115,7 +115,7 @@
 
 .iteration-story-count {
   background: rgba(255, 255, 255, 0.3);
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   padding: 2px 8px;
   font-size: 11px;
   margin-left: 8px;

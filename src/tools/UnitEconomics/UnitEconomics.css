@@ -1,0 +1,335 @@
+@import '@toolkit-pm/design-system';
+
+/* ── Layout ─────────────────────────────────────────────── */
+
+.ue-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 360px) 1fr;
+  gap: var(--spacing-md);
+  align-items: start;
+  min-width: 0;
+}
+
+/* ── Inputs panel ────────────────────────────────────────── */
+
+.ue-inputs-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  position: sticky;
+  top: var(--spacing-md);
+  overflow: hidden;
+  min-width: 0;
+}
+
+.ue-panel-title {
+  margin: 0 0 var(--spacing-xs) 0;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.ue-inputs-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.ue-input-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.ue-input-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+}
+
+.ue-input-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  flex: 1 1 auto;
+  min-width: 0;
+  line-height: 1.4;
+  padding-top: 2px;
+  cursor: help;
+}
+
+.ue-input-label .ds-tooltip-wrapper {
+  margin-left: 5px;
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.ue-number-input {
+  width: 80px;
+  min-width: 80px;
+  max-width: 80px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  background: var(--bg-elevated, #252530);
+  border: 1px solid var(--border-color, rgba(255,255,255,0.1));
+  border-radius: var(--radius-sm, 4px);
+  color: var(--text-primary, #fff);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 3px 6px;
+  text-align: right;
+  -moz-appearance: textfield;
+}
+
+.ue-number-input::-webkit-outer-spin-button,
+.ue-number-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.ue-number-input:focus {
+  outline: none;
+  border-color: var(--primary-orange, #ff8c42);
+}
+
+/* ── Tooltip ─────────────────────────────────────────────── */
+
+.ue-tooltip-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  font-size: 10px;
+  font-style: normal;
+  color: var(--text-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  cursor: help;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: color var(--animation-fast), border-color var(--animation-fast);
+}
+
+/* ── Right panel ─────────────────────────────────────────── */
+
+.ue-right-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* ── Metrics grid ────────────────────────────────────────── */
+
+.ue-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(160px, 1fr));
+  gap: var(--spacing-sm);
+}
+
+.ue-metric-card {
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: border-color 0.2s;
+}
+
+.ue-metric-card--highlight {
+  border-color: rgba(34, 197, 94, 0.4);
+  background: rgba(34, 197, 94, 0.05);
+}
+
+.ue-metric-card--warn {
+  border-color: rgba(239, 68, 68, 0.4);
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.ue-metric-label {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-tertiary, rgba(255,255,255,0.4));
+}
+
+.ue-metric-value {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary, #fff);
+  font-family: var(--font-heading, 'Fugaz One', cursive);
+  line-height: 1.1;
+}
+
+.ue-metric-sub {
+  margin: 0;
+  font-size: 11px;
+  color: var(--text-secondary, rgba(255,255,255,0.55));
+}
+
+/* ── Visualisation tile ──────────────────────────────────── */
+
+.ue-viz-tile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+}
+
+.ue-viz-tabs {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: var(--spacing-xs);
+}
+
+.ue-viz-tabs.ds-tab-bar {
+  gap: var(--spacing-xs);
+}
+
+.ue-tab-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ue-tab-icon {
+  font-size: 14px;
+}
+
+.ue-viz-explainer {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-tertiary, rgba(255,255,255,0.35));
+  line-height: 1.5;
+  border-left: 2px solid var(--primary-orange, #ff8c42);
+  padding-left: 10px;
+}
+
+.ue-viz-body {
+  min-height: 360px;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+}
+
+/* ── Break-even chart ────────────────────────────────────── */
+
+.break-even-chart-wrap,
+.unit-waterfall-wrap,
+.ltv-cac-visual-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.break-even-svg,
+.unit-waterfall-svg,
+.ltv-cac-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.break-even-legend,
+.waterfall-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 4px 0;
+}
+
+.be-legend-item,
+.wf-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--text-secondary, rgba(255,255,255,0.5));
+  font-family: var(--font-body);
+}
+
+.be-legend-dot,
+.wf-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.be-legend-dot--dashed {
+  border-radius: 2px;
+}
+
+.be-legend-scale {
+  margin-left: auto;
+  font-size: 10px;
+  color: var(--text-tertiary, rgba(255,255,255,0.25));
+  font-style: italic;
+}
+
+.be-legend-warn {
+  color: rgba(239, 68, 68, 0.85);
+  font-weight: 600;
+}
+
+/* ── Narrative tile ──────────────────────────────────────── */
+
+.ue-narrative {
+  padding: var(--spacing-md);
+}
+
+.ue-narrative h4 {
+  margin: 0 0 var(--spacing-xs) 0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-tertiary, rgba(255,255,255,0.4));
+}
+
+.ue-narrative p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-secondary, rgba(255,255,255,0.6));
+  line-height: 1.7;
+}
+
+.ue-narrative strong {
+  color: var(--text-primary, #fff);
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+
+@media (max-width: 1100px) {
+  .ue-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .ue-inputs-panel {
+    position: static;
+  }
+
+  .ue-metrics-grid {
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .ue-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ue-viz-tabs {
+    flex-wrap: wrap;
+  }
+}

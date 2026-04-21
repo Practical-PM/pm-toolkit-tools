@@ -21,7 +21,7 @@
   padding: 2rem;
   background: rgba(255, 140, 66, 0.1);
   border: 1px solid rgba(255, 140, 66, 0.2);
-  border-radius: 16px;
+  border-radius: var(--radius-xl);
   margin-bottom: 2rem;
 }
 
@@ -156,7 +156,7 @@
   padding: 1rem;
   background: rgba(251, 191, 36, 0.15);
   border-left: 3px solid var(--warning);
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
 }
 
 .unscored-notice p {

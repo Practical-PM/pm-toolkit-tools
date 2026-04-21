@@ -1,0 +1,82 @@
+.bvd-intro {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.bvd-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: var(--spacing-lg);
+}
+
+.bvd-inputs h3,
+.bvd-map h3 {
+  margin-top: 0;
+}
+
+.bvd-map-frame {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm);
+  background: var(--bg-elevated);
+}
+
+.bvd-map-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.bvd-map-bg {
+  fill: rgba(255, 255, 255, 0.02);
+}
+
+.bvd-axis-line {
+  stroke: var(--border-medium);
+  stroke-width: 1;
+}
+
+.bvd-axis-label {
+  fill: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 12px;
+}
+
+.bvd-point {
+  fill: var(--primary-orange);
+  stroke: color-mix(in srgb, var(--primary-orange) 55%, black);
+  stroke-width: 2;
+}
+
+.bvd-score-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-md);
+}
+
+.bvd-score-row p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.bvd-recommendation h3 {
+  margin-top: 0;
+}
+
+.bvd-recommendation p {
+  margin: 0 0 var(--spacing-sm) 0;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.bvd-recommendation p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .bvd-grid {
+    grid-template-columns: 1fr;
+  }
+}

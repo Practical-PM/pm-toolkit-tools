@@ -15,7 +15,7 @@
 
 .recommendation-card {
   padding: 20px;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   border: 1px solid var(--border-color);
   background: var(--bg-elevated);
   transition: transform var(--animation-fast), box-shadow var(--animation-fast), border-color var(--animation-fast);
@@ -98,7 +98,7 @@
   padding: 20px;
   border: 1px solid var(--border-color);
   border-left: 4px solid var(--primary-orange);
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   background: var(--bg-elevated);
 }
 

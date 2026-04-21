@@ -71,7 +71,7 @@
 .quadrant-badge {
   display: inline-block;
   padding: 4px 12px;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   font-size: 12px;
   font-weight: 600;
   color: var(--text-primary);
